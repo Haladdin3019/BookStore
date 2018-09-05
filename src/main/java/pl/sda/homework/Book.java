@@ -8,7 +8,7 @@ public class Book {
 
 
     public Book(String author, String title) {
-        this(author,title,5.0);
+        this(author, title, 5.0);
     }
 
     public Book(String author, String title, double rating) {
@@ -53,10 +53,9 @@ public class Book {
 
     @Override
     public String toString() {
-        return "Book{" +
-                "author='" + author + '\'' +
-                ", title='" + title + '\'' +
-                ", rating=" + rating +
-                '}';
+        return "author: " + author + " | " +
+                "title: " + title + " | " +
+                "rating: " + rating + " | " +
+                "\n";
     }
 }

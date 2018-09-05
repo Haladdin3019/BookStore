@@ -1,9 +1,6 @@
 package pl.sda.homework;
 
-import java.util.Map;
-import java.util.Set;
-import java.util.HashSet;
-import java.util.HashMap;
+import java.util.*;
 
 public class BookStore {
 
@@ -27,7 +24,6 @@ public class BookStore {
         bookCollection.add(book6);
 
 
-
         bookStorage = new HashMap<>();
         bookStorage.put(book1, 7);
         bookStorage.put(book2, 3);
@@ -37,7 +33,7 @@ public class BookStore {
         bookStorage.put(book6, 47);
     }
 
-    int collectionSize(){ // metoda pomocna do junitów - nie potrzebna do działania programu
+    int collectionSize() { // metoda pomocna do junitów - nie potrzebna do działania programu
         return bookCollection.size();
     }
 
@@ -55,4 +51,20 @@ public class BookStore {
         // TODO dla chętnych - jesli dodajemy do kolekcji książek nową pozycje to w magazynie powinna pojawić się taka z ilością 0.
         System.out.println("Dodano nową książkę do kolekcji: " + book);
     }
+
+
+
+    public void deleteBooksByAuthor(String authorName) {
+        //delete book per author (all of them)
+        /*
+        Book booksToRemovePerAuthor = null;
+        for (Book book : bookCollection){
+            if (book.getAuthor().equals(authorName)){
+                booksToRemovePerAuthor = book;
+            }
+            bookCollection.remove(booksToRemovePerAuthor);
+            */
+
+    }
+
 }

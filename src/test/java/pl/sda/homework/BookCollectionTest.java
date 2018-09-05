@@ -9,18 +9,24 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class BookCollectionTest {
 
-    private final static String NOT_IMPORTANT_AUTHOR = "some author";
-    private final static String NOT_IMPORTANT_TITLE = "some title";
-    private final static double NOT_IMPORTANT_RATING = 1.0;
+    private final static Book BOOK = new Book("Test Author", "Test title", 10);
+    BookStore bookStore = new BookStore();
 
     @Test
-    void afterAddOneBookMyCollectionSizeShouldBeSeven(){
+    public void afterAddOneBookMyCollectionSizeShouldBeSeven(){
         //given
-        BookStore bookStore = new BookStore();
-        assertEquals(6, bookStore.collectionSize());
+        BookStore bookStocomre = new BookStore();
         //when
-        bookStore.addBook(new Book(NOT_IMPORTANT_AUTHOR,NOT_IMPORTANT_TITLE,NOT_IMPORTANT_RATING));
+        bookStore.addBook(BOOK);
         //then
         assertEquals(7, bookStore.collectionSize());
+    }
+
+    @Test
+    public void checkIfCollectionSizeWillDecreaseAfterParticularBookWillBeRemoved (){
+
+        //given
+
+
     }
 }
