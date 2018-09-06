@@ -55,8 +55,16 @@ public class BookStore {
 
 
     public void deleteBooksByAuthor(String authorName) {
+
+        for (Iterator<Book> iterator = bookCollection.iterator(); iterator.hasNext();) {
+            Book s =  iterator.next();
+            if (authorName.equals(s.getAuthor())) {
+                iterator.remove();
+            }
+        }
+
         //delete book per author (all of them)
-        /*
+                /*
         Book booksToRemovePerAuthor = null;
         for (Book book : bookCollection){
             if (book.getAuthor().equals(authorName)){
@@ -67,4 +75,15 @@ public class BookStore {
 
     }
 
+    public void deleteBook(String bookTitle) {
+
+        Book bookToRemoveByTitle = null;
+        for (Book book: bookCollection) {
+            if (bookTitle.equals(book.getTitle())){
+                bookToRemoveByTitle = book;
+
+            }
+        }
+        bookCollection.remove(bookToRemoveByTitle);
+    }
 }

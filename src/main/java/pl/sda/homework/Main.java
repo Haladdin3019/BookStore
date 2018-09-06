@@ -9,7 +9,7 @@ public class Main {
 
 
         while (true) {
-            System.out.println("Wybierz opcje");
+            System.out.println("Chose an option:");
             System.out.println("1. Display books collection (no sort)");
             System.out.println("2. Add book to the collection");
             System.out.println("3. Delete book from the collection");
@@ -41,9 +41,9 @@ public class Main {
                     bookStore.addBook(newBook);
                     break;
                 case 3:
-//                    System.out.println("Please enter the title of the book to remove it:");
-//                    bookStore.deleteBook(scanner.nextLine());
-//                    break;
+                    System.out.println("Please enter the title of the book to remove it:");
+                    bookStore.deleteBook(scanner.nextLine());
+                    break;
                 case 4:
                     System.out.println("Please enter the name of Author, all books related to him will be deleted:");
                     bookStore.deleteBooksByAuthor(scanner.nextLine());
@@ -51,7 +51,7 @@ public class Main {
 
                 case 14:
                     System.exit(200);
-
+                    System.out.println("Bye bye!");
                 default:
                     System.out.println("Wybrana została niepoprawna opcja, spróbuj ponownie");
             }
